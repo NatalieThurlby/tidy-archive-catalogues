@@ -3,13 +3,15 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to tac's documentation!
+Welcome to the `tidy archive catalogues` project's documentation!
 ===============================
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
    contents/installation
+   contents/roadmap
+
 
 Indices and tables
 ==================
