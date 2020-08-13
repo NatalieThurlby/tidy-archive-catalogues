@@ -34,3 +34,16 @@ For example dates should be in a datetime format, places should be either points
 Both (1) and (2) should be tested on large archives (e.g. British Library and The National Collection), and smaller ones (e.g. The Theatre Collection, and the Henry Ransom Centre)\
 
 # Contributors
+<!-- TODO: Fill in contributors part -->
+Contributors are recognised using [all-contributors](link) guidelines.
+
+Natalie Thurlby
+Julian Warren
+Jo Elseworth
+Elaine McGirr
+Emma Howgill
+
+
+<!-- TODO: Include info about cataloguing guidelines.
+This: https://www.nationalarchives.gov.uk/documents/cat_guide_multi.pdf is the only open UK guidance I’ve seen for creation dates so far, but it’s from 2002, and it’s not too prescriptive (i.e. it suggests that it’s okay to use square brackets, c, or ?, but it doesn’t imply whether there is an order of preference, etc), so it makes sense that people would try different things.
+-->
