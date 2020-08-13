@@ -9,8 +9,7 @@ Welcome to the `tidy archive catalogues` project's documentation!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-   contents/installation
-   contents/roadmap
+   roadmap
 
 
 Indices and tables
