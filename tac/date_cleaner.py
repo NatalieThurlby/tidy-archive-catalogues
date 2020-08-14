@@ -3,6 +3,10 @@ import re
 import logging
 
 
+# TODO: Add function to convert to different types of datetime inputs/outputs:
+# e.g. TODO: https://blog.apastyle.org/apastyle/2010/01/the-generic-reference-when.html
+
+
 def tidy_time_string(time):
     """
     Tidies a string `time` into a `date` in `datetime64[D]` format, and records the status of the conversion

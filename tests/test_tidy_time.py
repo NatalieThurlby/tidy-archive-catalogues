@@ -16,7 +16,7 @@ def test_tidy_time_string():
         '29 Feb 1957': (pd.NaT, 'not_converted'),  # There was no 29th Feb this year
         '25-27 june': (pd.NaT, 'not_converted'),  # Pandas converts this str by default, but it has no year.
         '03 03 1920': (pd.to_datetime('03-03-1920'), 'exact'),
-        '01 01 1920': (pd.to_datetime('02-01-1920'), 'exact'),  # EXPECTED TO FAIL # TODO: remove
+        '01 01 1920': (pd.to_datetime('02-01-1920'), 'exact'),  # EXPECTED TO FAIL # TODO: remove, and instead, check it raises a warning https://docs.pytest.org/en/6.0.1/warnings.html#warns
         # '1-3 March 1920': (pd.to_datetime('02-03-1920', dayfirst=True), 'centered')
 
     }

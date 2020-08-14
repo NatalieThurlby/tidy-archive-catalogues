@@ -12,8 +12,8 @@ Welcome to the `tidy archive catalogues` project's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   roadmap
-   contents/installation
+   contents/roadmap
+   contents/quickstart
 
 
 Indices and tables
