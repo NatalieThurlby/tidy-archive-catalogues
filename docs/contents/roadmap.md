@@ -24,3 +24,19 @@ For example dates should be in a datetime format, places should be either points
     C. Timelines 
     
 Both (1) and (2) should be tested on large archives (e.g. British Library and The National Collection), and smaller ones (e.g. The Theatre Collection, and the Harry Ransom Centre)
+
+### Planned Milestones
+
+#### [First release v1.0.0](https://github.com/NatalieThurlby/tidy-archive-catalogues/milestone/1)
+
+[ ] All basic infrastructure set up (with fun GitHub buttons where they exist)
+    [ ] Website/documentation (Sphinx)
+    [ ] Citable (Zenodo)
+    [ ] Testing (Pytest/GitHub actions/coverage.py)
+    [ ] Milestones/issues organising what will be done next, and linking to roadmap.
+    [ ] Installable using `pip`
+[ ] Date-cleaning functionality finished (1Ai, 2A)
+    [ ] Return potential mistakes
+    [ ] Output usable dates and date ranges for visualisation.
+
+Due by 11th September.
