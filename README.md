@@ -1,6 +1,6 @@
-# The `Tidy Archive Catalogues` project
+# The Tidy Archive Catalogues project
 
-The aim of the `Tidy Archive Catalogues` project is to enable archivist catalogues to be human- and computer-readable. We want to create a python package which will:
+The aim of the Tidy Archive Catalogues project is to enable archivist catalogues to be human- and computer-readable. We want to create a python package which will:
  1. enable researchers to analyse and visualise at the level of a catalogue or a subset of the catalogue that they find interesting.
  2. make checking for mistakes in archiving (typos, or non-compliance with archiving standards) easy for archivists, who work quickly and make many subtle decisions.
 
