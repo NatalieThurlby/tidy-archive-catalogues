@@ -19,9 +19,9 @@ The project currently aims to have the following functionality:
 The output of (2.) should give the data in a useful format to interact with existing python/R libraries. 
 
 For example dates should be in a datetime format, places should be either points in longitude/latitude, or polygonal areas (e.g. in geojson), or easy to convert to. There should be tutorial notebooks, for creating simple visualisations of:
-    A. Social networks
-    B. Geographical areas
-    C. Timelines 
+    - A. Social networks
+    - B. Geographical areas
+    - C. Timelines 
     
 Both (1) and (2) should be tested on large archives (e.g. British Library and The National Collection), and smaller ones (e.g. The Theatre Collection, and the Harry Ransom Centre)
 
