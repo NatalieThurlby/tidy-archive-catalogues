@@ -14,6 +14,7 @@ Welcome to the `tidy archive catalogues` project's documentation!
 
    contents/roadmap
    contents/quickstart
+   contents/reference
 
 
 Indices and tables
