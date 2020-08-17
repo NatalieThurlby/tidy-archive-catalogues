@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Reference &#8212; tac 0.1.0 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Get started" href="quickstart.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="api-reference">
+<h1>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h1>
+<p>This page gives an overview of all functions in <code class="docutils literal notranslate"><span class="pre">tidy-archive-catalogues</span></code> project.</p>
+<div class="section" id="module-tac.date_cleaner">
+<span id="tac-date-cleaner"></span><h2><code class="docutils literal notranslate"><span class="pre">tac.date_cleaner</span></code><a class="headerlink" href="#module-tac.date_cleaner" title="Permalink to this headline">¶</a></h2>
+<p>Functions in this module exist to assist in converting archivist-written time strings (e.g. “circa 2-6 [June] 1934”)
+into computer-readable <cite>datetime64[D]</cite> format.</p>
+<div class="section" id="tac-date-cleaner-tidy-time-string">
+<h3><code class="docutils literal notranslate"><span class="pre">tac.date_cleaner.tidy_time_string</span></code><a class="headerlink" href="#tac-date-cleaner-tidy-time-string" title="Permalink to this headline">¶</a></h3>
+<dl class="py function">
+<dt id="tac.date_cleaner.tidy_time_string">
+<code class="sig-prename descclassname">tac.date_cleaner.</code><code class="sig-name descname">tidy_time_string</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">time</span></em><span class="sig-paren">)</span><a class="headerlink" href="#tac.date_cleaner.tidy_time_string" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Tidies a string <cite>time</cite> into a <cite>date</cite> in <cite>datetime64[D]</cite> format, and records the status of the conversion</dt><dd><p>(<cite>date_status</cite>).</p>
+</dd>
+<dt>The tidying aims to convert:</dt><dd><ul class="simple">
+<li><p>Easy to convert dates (“19 June 2014”)</p></li>
+<li><p>Various markers of uncertainty (e.g. “circa 2018”, “c. 2018 ” “c 2018”, “[June] 2018”)</p></li>
+<li><dl class="simple">
+<dt>Ranges of dates (e.g. “1920s”, “2-6 June 1920”, “2 June - 6 July 1920”, “1920s - 1931”), by returning a </dt><dd><p>central date.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt>It also aims to flag some entries to be looked at more closely by hand.</dt><dd><ul class="simple">
+<li><p>Some potential typos (e.g. “120s-1930s”, or “2975”)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>time</strong> – Input time string (e.g. “2-6 [June] 1934”, “2018”, “1930s”)</p>
+</dd>
+<dt class="field-even">Return date</dt>
+<dd class="field-even"><p>The date in <cite>datetime64[D]</cite> format. Not a time (<cite>pd.NaT</cite>) if could not convert.</p>
+</dd>
+<dt class="field-odd">Return date_status</dt>
+<dd class="field-odd"><p>String describing status of converted date. Possible values (“circa”, “centred”, “exact”, or
+“not_converted”).</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="tac-date-cleaner-tidy-time-df">
+<h3><code class="docutils literal notranslate"><span class="pre">tac.date_cleaner.tidy_time_df</span></code><a class="headerlink" href="#tac-date-cleaner-tidy-time-df" title="Permalink to this headline">¶</a></h3>
+<dl class="py function">
+<dt id="tac.date_cleaner.tidy_time_df">
+<code class="sig-prename descclassname">tac.date_cleaner.</code><code class="sig-name descname">tidy_time_df</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">df</span></em>, <em class="sig-param"><span class="n">time_col</span></em>, <em class="sig-param"><span class="n">new_tidy_col</span><span class="o">=</span><span class="default_value">'date_tidy'</span></em>, <em class="sig-param"><span class="n">new_status_col</span><span class="o">=</span><span class="default_value">'date_status'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#tac.date_cleaner.tidy_time_df" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates additional columns in an archive catalogue’s data frame, containing the tidied date and the date status.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> – Data frame containing an archive catalogue.</p></li>
+<li><p><strong>time_col</strong> – The column name where the date is stored in text format (used to create tidied date).</p></li>
+<li><p><strong>new_tidy_col</strong> – The column name (default <cite>date_tidy</cite>) where the new tidied date will be stored, in
+<cite>datetime64[D]</cite> format.</p></li>
+<li><p><strong>new_status_col</strong> – The column name (default <cite>date_status</cite>) where the status of the tidied date (either “circa”,
+“centred”, “exact”, or “not_converted”), will be stored.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>df</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">tac</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="roadmap.html">Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Get started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-tac.date_cleaner"><code class="docutils literal notranslate"><span class="pre">tac.date_cleaner</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="quickstart.html" title="previous chapter">Get started</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Natalie Thurlby.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/contents/reference.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,6 +1,6 @@
-# The `Tidy Archive Catalogues` project
+# The Tidy Archive Catalogues project
 
-The aim of the `Tidy Archive Catalogues` project is to enable archivist catalogues to be human- and computer-readable. We want to create a python package which will:
+The aim of the Tidy Archive Catalogues project is to enable archivist catalogues to be human- and computer-readable. We want to create a python package which will:
  1. enable researchers to analyse and visualise at the level of a catalogue or a subset of the catalogue that they find interesting.
  2. make checking for mistakes in archiving (typos, or non-compliance with archiving standards) easy for archivists, who work quickly and make many subtle decisions.
 
@@ -31,7 +31,7 @@ For example dates should be in a datetime format, places should be either points
     B. Geographical areas
     C. Timelines 
     
-Both (1) and (2) should be tested on large archives (e.g. British Library and The National Collection), and smaller ones (e.g. The Theatre Collection, and the Harry Ransom Centre)\
+Both (1) and (2) should be tested on large archives (e.g. British Library and The National Collection), and smaller ones (e.g. The Theatre Collection, and the Harry Ransom Centre)
 
 # Contributors
 <!-- TODO: Fill in contributors part -->
