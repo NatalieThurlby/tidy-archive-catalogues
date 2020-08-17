@@ -1,6 +1,15 @@
+"""
+Functions in this module exist to assist in converting archivist-written time strings (e.g. "circa 2-6 [June] 1934")
+into computer-readable `datetime64[D]` format.
+"""
+
+
 import pandas as pd
 import re
 import logging
+
+# TODO: Add function to convert to different types of datetime inputs/outputs:
+# e.g. TODO: https://blog.apastyle.org/apastyle/2010/01/the-generic-reference-when.html
 
 
 def tidy_time_string(time):
@@ -9,7 +18,7 @@ def tidy_time_string(time):
         (`date_status`).
     The tidying aims to convert:
         * Easy to convert dates ("19 June 2014")
-        * Various markers of uncertainty (e.g. "circa 2018", "c. 2018 " "c 2018", "[June] 2018"
+        * Various markers of uncertainty (e.g. "circa 2018", "c. 2018 " "c 2018", "[June] 2018")
         * Ranges of dates (e.g. "1920s", "2-6 June 1920", "2 June - 6 July 1920", "1920s - 1931"), by returning a 
             central date.
     It also aims to flag some entries to be looked at more closely by hand.
@@ -17,9 +26,9 @@ def tidy_time_string(time):
             
     :param time: Input time string (e.g. "2-6 [June] 1934", "2018", "1930s")
 
-    :return date: The date in `datetime64[D]` format. Not a time (`pd.NaT`) if could not convert. 
-    :return date_status: String describing status of converted date. Possible values ("circa", "centred", "exact", or 
-        "not_converted").
+    :return date: The date in `datetime64[D]` format. Not a time (`pd.NaT`) if could not convert.
+    :return date_status: String describing status of converted date. Possible values ("circa", "centred", "exact", or
+     "not_converted").
     """
 
     # TODO - :return date_range: Where date_status is "centred", date_range is a tuple (`first_date`, `last_date`) of
@@ -162,9 +171,10 @@ def tidy_time_df(df, time_col, new_tidy_col='date_tidy', new_status_col='date_st
     :param new_tidy_col: The column name (default `date_tidy`) where the new tidied date will be stored, in
      `datetime64[D]` format.
     :param new_status_col: The column name (default `date_status`) where the status of the tidied date (either "circa",
-    "centred", "exact", or "not_converted"), will be stored.
+     "centred", "exact", or "not_converted"), will be stored.
 
     :return: df
+
     """
     date_tidy_series = pd.Series(index=df.index, dtype='datetime64[D]')
     date_status_series = pd.Series(index=df.index, dtype='object')
