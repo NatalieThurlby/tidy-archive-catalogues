@@ -19,10 +19,10 @@ def tidy_time_string(time):
     It also aims to flag some entries to be looked at more closely by hand.
         * Some potential typos (e.g. "120s-1930s", or "2975")
             
-    :param `time`: Input time string (e.g. "2-6 [June] 1934", "2018", "1930s")
+    :param time: Input time string (e.g. "2-6 [June] 1934", "2018", "1930s")
 
-    :return `date`: The date in `datetime64[D]` format. Not a time (`pd.NaT`) if could not convert.
-    :return `date_status`: String describing status of converted date. Possible values ("circa", "centred", "exact", or
+    :return date: The date in `datetime64[D]` format. Not a time (`pd.NaT`) if could not convert.
+    :return date_status: String describing status of converted date. Possible values ("circa", "centred", "exact", or
      "not_converted").
     """
 

@@ -2,7 +2,7 @@
 
 ## Installation
 
-The `tidy archive catalogues` package can be installed via [`pip`](), like so:
+The `tidy archive catalogues` package can be installed via [`pip`](https://pip.pypa.io/en/stable/), like so:
 
 ```python
 pip install tidy_archive_catalogues

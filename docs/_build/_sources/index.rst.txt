@@ -6,7 +6,7 @@
 .. In the toctree you must leave a line between the toctree info and the file names.
 
 Welcome to the `tidy archive catalogues` project's documentation!
-===============================
+=================================================================
 
 .. toctree::
    :maxdepth: 2
