@@ -1,7 +1,12 @@
+"""
+Functions in this module exist to assist in converting archivist-written time strings (e.g. "circa 2-6 [June] 1934")
+into computer-readable `datetime64[D]` format.
+"""
+
+
 import pandas as pd
 import re
 import logging
-
 
 # TODO: Add function to convert to different types of datetime inputs/outputs:
 # e.g. TODO: https://blog.apastyle.org/apastyle/2010/01/the-generic-reference-when.html
