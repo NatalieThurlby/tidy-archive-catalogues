@@ -3,6 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+.. In the toctree you must leave a line between the toctree info and the file names.
+
 Welcome to the `tidy archive catalogues` project's documentation!
 ===============================
 
@@ -10,8 +12,9 @@ Welcome to the `tidy archive catalogues` project's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   roadmap
-   contents/installation
+   contents/roadmap
+   contents/quickstart
+   contents/reference
 
 
 Indices and tables
