@@ -35,7 +35,7 @@ Both (1) and (2) should be tested on large archives (e.g. British Library and Th
 
 # Contributors
 <!-- TODO: Fill in contributors part -->
-Contributors are recognised using [all-contributors](link) guidelines.
+Contributors are recognised using [all-contributors](https://github.com/all-contributors/all-contributors) guidelines.
 
 Natalie Thurlby
 Julian Warren
