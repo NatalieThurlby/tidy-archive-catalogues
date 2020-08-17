@@ -37,19 +37,31 @@
 <h1>Roadmap<a class="headerlink" href="#roadmap" title="Permalink to this headline">¶</a></h1>
 <p>The project currently aims to have the following functionality:</p>
 <ol class="simple">
-<li><p>Enable archivists to search their archives for potential typos/mistakes. Specifically, they will be able to be returned with:
-A. Specific places to check in the archive (e.g. specific reference numbers/codes, and columns)
-for mistakes, particularly for:
-i.  Dates
-ii. Named entities (places, people, and businesses)
-B. Flag inconsistencies in the archive, according to a chosen set of archiving guidelines, for
-example if ‘c.’, ‘c’, ‘circa’ are used to mean approximately, offer one option.
-i. According to national archives guidelines
-ii. According to Theatre Collection guidelines</p></li>
+<li><p>Enable archivists to search their archives for potential typos/mistakes. Specifically, they will be able to be returned with:</p>
+<ul class="simple">
+<li><p>A. Specific places to check in the archive (e.g. specific reference numbers/codes, and columns)
+for mistakes, particularly for:</p>
+<ul>
+<li><p>i.  Dates</p></li>
+<li><p>ii. Named entities (places, people, and businesses)</p></li>
+</ul>
+</li>
+<li><p>B. Flag inconsistencies in the archive, according to a chosen set of archiving guidelines, for
+example if ‘c.’, ‘c’, ‘circa’ are used to mean approximately, offer one option.</p>
+<ul>
+<li><p>i. According to national archives guidelines</p></li>
+<li><p>ii. According to Theatre Collection guidelines</p></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><p>Enable digital humanities researchers to digitally visualise/analyse the collection, by creating
-machine-readable and human-readable (for labels, etc) versions of the following c:
-A. Dates, date ranges, and date uncertainty
-B. Named entities (places, people, and businesses)</p></li>
+machine-readable and human-readable (for labels, etc) versions of the following c:</p>
+<ul class="simple">
+<li><p>A. Dates, date ranges, and date uncertainty</p></li>
+<li><p>B. Named entities (places, people, and businesses)</p></li>
+</ul>
+</li>
 </ol>
 <p>The output of (2.) should give the data in a useful format to interact with existing python/R libraries.</p>
 <p>For example dates should be in a datetime format, places should be either points in longitude/latitude, or polygonal areas (e.g. in geojson), or easy to convert to. There should be tutorial notebooks, for creating simple visualisations of:
@@ -61,16 +73,50 @@ C. Timelines</p>
 <h2>Planned Milestones<a class="headerlink" href="#planned-milestones" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="first-release-v1-0-0">
 <h3><a class="reference external" href="https://github.com/NatalieThurlby/tidy-archive-catalogues/milestone/1">First release v1.0.0</a><a class="headerlink" href="#first-release-v1-0-0" title="Permalink to this headline">¶</a></h3>
-<p>[ ] All basic infrastructure set up (with fun GitHub buttons where they exist)
-[ ] Website/documentation (Sphinx)
-[ ] Citable (Zenodo)
-[ ] Testing (Pytest/GitHub actions/coverage.py)
-[ ] Milestones/issues organising what will be done next, and linking to roadmap.
-[ ] Installable using <code class="docutils literal notranslate"><span class="pre">pip</span></code>
-[ ] Date-cleaning functionality finished (1Ai, 2A)
-[ ] Return potential mistakes
-[ ] Output usable dates and date ranges for visualisation.</p>
-<p>Due by 11th September.</p>
+<p>Due by: 11th September</p>
+<ul class="simple">
+<li><p>[ ] All basic infrastructure set up (with fun GitHub buttons where they exist)</p>
+<ul>
+<li><p>[ ] License + badge</p></li>
+<li><p>[ ] Website/documentation (Sphinx)</p>
+<ul>
+<li><p>[x] Roadmap</p></li>
+<li><p>[x] Linking roadmap to milestones/issues</p></li>
+<li><p>[x] auto-documenting functions/modules</p></li>
+<li><p>[ ] add basic tutorials for 1Ai, 2A</p></li>
+<li><p>[ ] update website with GitHub actions set up</p></li>
+<li><p>[ ] beautifying website</p></li>
+</ul>
+</li>
+<li><p>[ ] Citable (Zenodo) + badge</p></li>
+<li><p>[ ] Testing</p>
+<ul>
+<li><p>[x] Initial tests</p></li>
+<li><p>[ ] Pytest + GitHub actions set up</p></li>
+<li><p>[ ] Coverage.py set up + badge</p></li>
+</ul>
+</li>
+<li><p>[ ] Installable using <code class="docutils literal notranslate"><span class="pre">pip</span></code></p>
+<ul>
+<li><p>[ ] Beta release + badge</p></li>
+<li><p>[ ] GitHub actions automatically release new versions on main</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>[ ] Date-cleaning functionality finished (1Ai, 2A)</p>
+<ul>
+<li><p>[ ] Return potential mistakes</p></li>
+<li><p>[x] Output usable dates and date ranges for visualisation.</p>
+<ul>
+<li><p>[x] Dates</p></li>
+<li><p>[x] Date statuses</p></li>
+<li><p>[x] Date ranges</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 </div>
 </div>
 </div>
