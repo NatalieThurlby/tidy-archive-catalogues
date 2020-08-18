@@ -1,4 +1,4 @@
-# The Tidy Archive Catalogue project
+# The Tidy Archive Catalogues project
 
 The aim of the Tidy Archive Catalogue project is to provide code to create human- and computer-readable archivist catalogues. We want to create a python package which will:
  1. enable researchers to analyse and visualise at the level of a catalogue or a subset of the catalogue that they find interesting.
